@@ -1,0 +1,38 @@
+
+
+.one-third,.two-third{
+    float: left;
+    display: inline;    
+}
+
+.one-third {
+    width: 33.3333%;
+}
+.two-third {
+    width: 66.6666%;
+}
+.full-size {
+    width: 100vw;
+    height: 100vh;
+}
+
+.css-top {
+    top: 0;
+}
+.css-bot {
+    bottom: 0;
+}
+.css-left {
+    left: 0;
+}
+.css-right {
+    right: 0;
+}
+
+.dark-blue {
+    color: blue;
+}
+
+ul.Circle {
+    list-style-type: circle;
+}
