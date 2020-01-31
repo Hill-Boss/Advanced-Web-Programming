@@ -6,17 +6,31 @@
     <link rel="stylesheet" href="./static/css/w3.css">
     <title></title>
   </head>
-  <body>
-    <div class="w3-light-blue w3-top  w3-left w3-right">
-      <div class="w3-dark-grey w3-top w3-left w3-right h-100px">
-        <div class="w3-container">
-          <h4>Cody Hill-Boss</h4>
-          <h6>Advanced Web Programming</h6>
-        </div>
+  <body class="w3-light-blue">
+    <div class="w3-dark-grey w3-top w3-left w3-right h-100px">
+      <div class="w3-container">
+        <h4>Cody Hill-Boss</h4>
+        <h6>Advanced Web Programming</h6>
       </div>
-      <div class="w3-blue w3-left h-100vh mar-top-100px w-25per">
-sdadsad
+    </div>
+    <div class="w3-right w3-twothird h-100per mar-top-100px w-100per">
+      <div id="AdvPrg" class="hide h-100vh">
+        asdsadasdas
+      </div>
+      <div id="WebTech" class="hide h-100vh">
+        helladjklsakdal;
+      </div>
+    </div>
+    <div class="w3-blue w3-left w3-third h-100vh mar-top-100px">
+      <div class="w3-container">
+        <hr>
+        <div onclick="toggle_index_info('AdvPrg', 'WebTech')" class="w3-btn yellow w-100per">Advanced Programming</div>
+        <br><br>
+        <div onclick="toggle_index_info('WebTech', 'AdvPrg')" class="w3-btn yellow w-100per">Web Technologies</div>
       </div>
     </div>
   </body>
+  <script src="./static/js/main.js"></script>
+
+
 </html>
