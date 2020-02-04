@@ -10,6 +10,10 @@
   height: 100%;
 }
 
+.h-25per {
+  height: 25%;
+}
+
 .h-auto {
   height: auto;
 }
@@ -40,4 +44,8 @@
 
 .hide {
   display: none;
+}
+
+.max-20vh {
+  max-height: 20vh;
 }
