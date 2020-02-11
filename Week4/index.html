@@ -5,30 +5,81 @@
     <title>Form Validation</title>
     <link rel="stylesheet" href="../static/css/main.css">
     <link rel="stylesheet" href="../static/css/w3.css">
-    <script scr="../static/js/week4.js"></script>
+
+    <style media="screen">
+      .inline-block {
+        display: inline-block!important;
+      }
+
+      .width {
+        width: auto!important;
+      }
+
+    </style>
+
   </head>
   <body>
-    <div class="w3-container w3-top w3-center w3-light-blue">
+    <script type="text/javascript">
+      function validate() {
+        var first = document.forms["loginForm"]["firstname"].value;
+        var last = document.forms["loginForm"]["lastname"].value;
+        var num = document.forms["loginForm"]["number"].value;
+        var email = document.forms["loginForm"]["email"].value;
+        var psw = document.forms["loginForm"]["psw"].value;
+        var psw_re = document.forms["loginForm"]["psw-re"].value;
+
+        if (first == "" || last == "") {
+          alert("You must enter your first and last name");
+          return false;
+        }
+
+        if(isNaN(num) || (num == "") ) {
+          alert("You must enter a number");
+          return false;
+        }
+
+        if (!(email.includes("@")) || (email   = "") )  {
+          alert("You must enter a valid email address");
+          return false;
+        }
+
+        if(psw != psw_re || psw == '' || psw_re == '') {
+          alert("Passwords must match and cannot be empty");
+          return false;
+        }
+
+        alert("You successfully filled in this form.");
+        return true;
+      }
+
+    </script>
+    <div class="w3-container w3-top w3-bottom w3-center w3-light-blue">
       <div class="w3-container w3-center">
-        <br>
-        <br>
-        <form name="loginForm" class="w3-right" action="./index.html" onsubmit="return validate()" method="post">
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+        <form class="" name="loginForm" action="../Week3/" onsubmit="return validate()" method="get">
           <h4>Form</h4>
-          <label for="firstname"></label>
-          <input type="text" name="firstname" placeholder="First Name" maxlength="60" required>
+          <label for="firstname">First name</label><br>
+          <input class="w3-input inline-block width" type="text" name="firstname" placeholder="First Name" required>
           <br>
-          <label for="lastname"></label>
-          <input type="text" name="lastname" placeholder="Last Name" maxlength="60" required>
+          <label for="lastname">Last name</label><br>
+          <input class="w3-input inline-block width" type="text" name="lastname" placeholder="Last Name" required>
           <br>
-          <label for="number"></label>
-          <input type="text" name="number" placeholder="42" required>
+          <label for="number">Number</label><br>
+          <input class="w3-input inline-block width" type="text" name="number" placeholder="42" required>
           <br>
-          <label for="email"></label>
-          <input type="email" name="email" placeholder="email" required>
+          <label for="email">email address</label><br>
+          <input class="w3-input inline-block width" type="email" name="email" placeholder="email" required>
+          <br>
+          <label for="psw">Password</label><br>
+          <input class="w3-input inline-block width" type="password" name="psw" placeholder="*******" required>
+          <br>
+          <label for="psw-re">Password</label><br>
+          <input class="w3-input inline-block width" type="password" name="psw-re" placeholder="*******" required>
           <br>
           <input type="submit" class="w3-btn w3-light-green " value="Submit">
         </form>
       </div>
     </div>
   </body>
+
 </html>
