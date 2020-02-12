@@ -12,7 +12,7 @@
     $x = "just no";
     var_dump($x, $y, $z);
     ?>
-    
+
     <?php
     $even_numbers =[];
     $even_numbers[2] = 0;
