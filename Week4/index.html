@@ -29,22 +29,31 @@
         var psw_re = document.forms["loginForm"]["psw-re"].value;
 
         if (first == "" || last == "") {
-          alert("You must enter your first and last name");
+          document.getElementById('fn').style.display = ;
+          document.getElementById('ln').innerHTML = "You must enter your last name";
           return false;
         }
 
         if(isNaN(num) || (num == "") ) {
-          alert("You must enter a number");
+          document.getElementById('n').innerHTML = "You must enter a number";
           return false;
         }
 
         if (!(email.includes("@")) || (email   = "") )  {
-          alert("You must enter a valid email address");
+          document.getElementById('em').innerHTML = "You must enter a valid email address";
           return false;
         }
 
         if(psw != psw_re || psw == '' || psw_re == '') {
-          alert("Passwords must match and cannot be empty");
+          if (psw == '') {
+            document.getElementById('pw').innerHTML = "You must enter a password";
+          }
+          if (psw != psw_re) {
+            document.getElementById('pr').innerHTML = "password does not match";
+          } else if (psw_re == '') {
+            document.getElementById('pr').innerHTML = "You must enter a password";
+          }
+
           return false;
         }
 
@@ -57,24 +66,30 @@
       <div class="w3-container w3-center">
         <br><br><br>
         <form class="" name="loginForm" action="../Week3/" onsubmit="return validate()" method="get">
-          <h4>Form</h4>
+          <h4>Basic info</h4>
           <label for="firstname">First name</label><br>
-          <input class="w3-input inline-block width" type="text" name="firstname" placeholder="First Name" required>
+          <input class="w3-input inline-block width" type="text" name="firstname" placeholder="First Name">
+          <p id='fn' class="hide">You must enter your first name</p>
           <br>
           <label for="lastname">Last name</label><br>
-          <input class="w3-input inline-block width" type="text" name="lastname" placeholder="Last Name" required>
+          <input class="w3-input inline-block width" type="text" name="lastname" placeholder="Last Name">
+          <p id='ln' class="hide">You must enter your last name</p>
           <br>
           <label for="number">Number</label><br>
-          <input class="w3-input inline-block width" type="text" name="number" placeholder="42" required>
+          <input class="w3-input inline-block width" type="text" name="number" placeholder="42">
+          <p id='n' class="hide">You must enter a number</p>
           <br>
           <label for="email">email address</label><br>
           <input class="w3-input inline-block width" type="email" name="email" placeholder="email" required>
+          <p id='em' class="hide">You must enter an email</p>
           <br>
           <label for="psw">Password</label><br>
           <input class="w3-input inline-block width" type="password" name="psw" placeholder="*******" required>
+          <p id='pw' class="hide">You must enter a password</p>
           <br>
-          <label for="psw-re">Password</label><br>
+          <label for="psw-re">Confirm Password</label><br>
           <input class="w3-input inline-block width" type="password" name="psw-re" placeholder="*******" required>
+          <p id='pr' class="hide">You must enter the same password as above</p>
           <br>
           <input type="submit" class="w3-btn w3-light-green " value="Submit">
         </form>
