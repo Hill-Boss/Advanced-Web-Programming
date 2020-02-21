@@ -76,7 +76,7 @@
       First the variable information on x which is an int. <br>
       Then the variable information on x and y and z, where z was not previusly defined <br>
       <br>
-      Second the elements of $even_numbers, 2, 0, 1. print that $even_numbers is an array <br>
+      Second the elements of Array $even_numbers. print that $even_numbers is an array <br>
       Print variable info of print_r($even_numbers, true), which is a string <br>
     </p>
     <pre><code>
