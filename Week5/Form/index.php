@@ -21,29 +21,29 @@
       {
         if (array_key_exists($postName, $_POST))
         {
-          switch ($_POST.$postName)
+          switch ($postName)
           {
           case $postNameArr[0]:
             echo "Perform actual code for F1_Submit.";
             break;
 
-          case '$postNameArr[1]':
+          case $postNameArr[1]:
             echo "Perform actual code for F2_Submit.";
             break;
 
-          case '$postNameArr[2]':
+          case $postNameArr[2]:
             echo "Perform actual code for F3_Submit.";
             break;
 
-          case '$postNameArr[3]':
+          case $postNameArr[3]:
             echo "Perform actual code for F3_Submit.";
             break;
 
-          case '$postNameArr[4]':
+          case $postNameArr[4]:
             echo "Perform actual code for F3_Submit.";
             break;
 
-          case '$postNameArr[4]':
+          case $postNameArr[5]:
             echo "Perform actual code for F3_Submit.";
             break;
 
