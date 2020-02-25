@@ -27,29 +27,29 @@
         var psw_re = document.forms["loginForm"]["psw-re"].value;
 
         if (first == "" || last == "") {
-          document.getElementById('fn').style.display = ;
-          document.getElementById('ln').innerHTML = "You must enter your last name";
+          document.getElementById('fn').classList.toggle('hide');
+          document.getElementById('ln').classList.toggle('hide');
           return false;
         }
 
         if(isNaN(num) || (num == "") ) {
-          document.getElementById('n').innerHTML = "You must enter a number";
+          document.getElementById('n').classList.toggle('hide');
           return false;
         }
 
         if (!(email.includes("@")) || (email   = "") )  {
-          document.getElementById('em').innerHTML = "You must enter a valid email address";
+          document.getElementById('em').classList.toggle('hide');
           return false;
         }
 
         if(psw != psw_re || psw == '' || psw_re == '') {
           if (psw == '') {
-            document.getElementById('pw').innerHTML = "You must enter a password";
+            document.getElementById('pw').classList.toggle('hide');
           }
           if (psw != psw_re) {
-            document.getElementById('pr').innerHTML = "password does not match";
+            document.getElementById('pr').classList.toggle('hide');
           } else if (psw_re == '') {
-            document.getElementById('pr').innerHTML = "You must enter a password";
+            document.getElementById('pr').classList.toggle('hide');
           }
 
           return false;
