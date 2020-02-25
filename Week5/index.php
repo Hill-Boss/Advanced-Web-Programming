@@ -2,7 +2,64 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Week 5</title>
+    <link rel="stylesheet" href="../static/css/main.css">
+    <link rel="stylesheet" href="../static/css/w3.css">
+
+    <style media="screen">
+      .inline-block {
+        display: inline-block!important;
+      }
+
+      .width {
+        width: auto!important;
+      }
+
+    </style>
+
+    <script type="text/javascript">
+      function validate() {
+        var first = document.forms["loginForm"]["firstname"].value;
+        var last = document.forms["loginForm"]["lastname"].value;
+        var num = document.forms["loginForm"]["number"].value;
+        var email = document.forms["loginForm"]["email"].value;
+        var psw = document.forms["loginForm"]["psw"].value;
+        var psw_re = document.forms["loginForm"]["psw-re"].value;
+
+        if (first == "" || last == "") {
+          document.getElementById('fn').style.display = ;
+          document.getElementById('ln').innerHTML = "You must enter your last name";
+          return false;
+        }
+
+        if(isNaN(num) || (num == "") ) {
+          document.getElementById('n').innerHTML = "You must enter a number";
+          return false;
+        }
+
+        if (!(email.includes("@")) || (email   = "") )  {
+          document.getElementById('em').innerHTML = "You must enter a valid email address";
+          return false;
+        }
+
+        if(psw != psw_re || psw == '' || psw_re == '') {
+          if (psw == '') {
+            document.getElementById('pw').innerHTML = "You must enter a password";
+          }
+          if (psw != psw_re) {
+            document.getElementById('pr').innerHTML = "password does not match";
+          } else if (psw_re == '') {
+            document.getElementById('pr').innerHTML = "You must enter a password";
+          }
+
+          return false;
+        }
+
+        alert("You successfully filled in this form.");
+        return true;
+      }
+
+    </script>
   </head>
   <body>
     <h2>Part 1</h2>
@@ -49,8 +106,21 @@
       ?>
     </code></pre>
     <br>
-    <!-- https://www.google.com/search?q=What+is+the+var_dump+function%3F+How+is+it+different+than+print_r%3F&oq=What+is+the+var_dump+function%3F+How+is+it+different+than+print_r%3F&aqs=chrome..69i57.312j0j7&sourceid=chrome&ie=UTF-8 -->
     <h4>Problem 3</h4><br>
+    <p>
+      print_r to a variable <br>
+    </p>
+    <pre><code>
+      &lt;?php
+        $myArray = [1, 2, 3, 4];
+        var_dump($myArray)
+        $printR = print_r($myArray, true);
+        print_r($printR)
+      ?>
+    </code></pre>
+    <br>
+    <!-- https://www.google.com/search?q=What+is+the+var_dump+function%3F+How+is+it+different+than+print_r%3F&oq=What+is+the+var_dump+function%3F+How+is+it+different+than+print_r%3F&aqs=chrome..69i57.312j0j7&sourceid=chrome&ie=UTF-8 -->
+    <h4>Problem 4</h4><br>
     <p>
       var_dump displays structured information about the object / variable. <br>
       This includes type and values. Like print_r arrays are recursed through and indented. <br>
@@ -60,18 +130,18 @@
       &lt;?php
         $myArray = [1, 2, 3, 4];
         var_dump($myArray)
-        print_r($myArray, TRUE);
+        print_r($myArray, true);
       ?>
     </code></pre>
     <br>
-    <h4>Problem 4</h4><br>
+    <h4>Problem 5</h4><br>
     <p>
       dynamic typing is when the type of a variable is determined at runtime not on compilation. <br>
       Some advantages of this are that the code is cleaner, type mismatching is harder, and programming is easier. <br>
       Some disadvantages of this are that types are not determined by the programmer, type errors are only at runtime, and it's harder to know what type something is. <br>
     </p>
     <br>
-    <h4>Problem 5</h4><br>
+    <h4>Problem 6</h4><br>
     <p>
       First the variable information on x which is an int. <br>
       Then the variable information on x and y and z, where z was not previusly defined <br>
@@ -115,5 +185,40 @@
       var_dump($even_numbers);
       var_dump(print_r($even_numbers, true));
     ?>
+    <br>
+    <br>
+    <div class="w3-container w3-top w3-bottom w3-center w3-light-blue">
+      <div class="w3-container w3-center">
+        <br><br><br>
+        <form class="" name="loginForm" action="../Week5/Form/index.php" onsubmit="return validate()" method="get">
+          <h4>Basic info</h4>
+          <label for="firstname">First name</label><br>
+          <input class="w3-input inline-block width" type="text" name="firstname" placeholder="First Name">
+          <p id='fn' class="hide">You must enter your first name</p>
+          <br>
+          <label for="lastname">Last name</label><br>
+          <input class="w3-input inline-block width" type="text" name="lastname" placeholder="Last Name">
+          <p id='ln' class="hide">You must enter your last name</p>
+          <br>
+          <label for="number">Number</label><br>
+          <input class="w3-input inline-block width" type="text" name="number" placeholder="42">
+          <p id='n' class="hide">You must enter a number</p>
+          <br>
+          <label for="email">email address</label><br>
+          <input class="w3-input inline-block width" type="email" name="email" placeholder="email" required>
+          <p id='em' class="hide">You must enter an email</p>
+          <br>
+          <label for="psw">Password</label><br>
+          <input class="w3-input inline-block width" type="password" name="psw" placeholder="*******" required>
+          <p id='pw' class="hide">You must enter a password</p>
+          <br>
+          <label for="psw-re">Confirm Password</label><br>
+          <input class="w3-input inline-block width" type="password" name="psw-re" placeholder="*******" required>
+          <p id='pr' class="hide">You must enter the same password as above</p>
+          <br>
+          <input type="submit" class="w3-btn w3-light-green " value="Submit">
+        </form>
+      </div>
+    </div>
   </body>
 </html>
