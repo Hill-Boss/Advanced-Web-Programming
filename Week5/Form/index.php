@@ -11,6 +11,7 @@
 <body>
   <!-- <button onclick="document.getElementById('id01').style.display='block'" class="w3-btn w3-black">Open Modal</button> -->
   <?php
+    echo "trying";
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
       // collect value of input field
       $postNameArr = array('firstname', 'lastname', 'number', 'email', 'psw', 'psw-re');
