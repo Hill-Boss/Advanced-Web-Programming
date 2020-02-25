@@ -43,7 +43,7 @@
             break;
 
           case $postNameArr[3]:
-            $echo += "email: ".$_POST[$postNameArr[3]]." <br>";
+            echo "email: ".$_POST[$postNameArr[3]]." <br>";
             break;
 
           case $postNameArr[4]:
