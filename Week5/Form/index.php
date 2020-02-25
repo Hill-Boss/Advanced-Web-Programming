@@ -11,12 +11,19 @@
 <body>
   <!-- <button onclick="document.getElementById('id01').style.display='block'" class="w3-btn w3-black">Open Modal</button> -->
   <?php
-    echo "trying";
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
       // collect value of input field
       $postNameArr = array('firstname', 'lastname', 'number', 'email', 'psw', 'psw-re');
 
       // Find all of the post identifiers within $_POST
+      echo   "<div id=\"form-return-modal-01\" class=\"w3-modal\" style=\"display:block;\" onclick=\"document.getElementById('form-return-modal-01').style.display='none'\">"
+      echo "<div class=\"w3-modal-content w3-card-4 w3-teal w3-round-xlarge\">"
+      echo "<span onclick=\"document.getElementById('form-return-modal-01').style.display='none'\" class=\"w3-btn w3-display-topright w3-round-xlarge\">&times;</span>"
+      echo "<br><br>"
+      echo "<div class=\"w3-container w3-white\">"
+      echo "<div style=\"width:fit-content;margin-left:25%;\">"
+      echo "<h3>"
+
       foreach ($postNameArr as $postName)
       {
         if (array_key_exists($postName, $_POST))
@@ -24,61 +31,42 @@
           switch ($postName)
           {
           case $postNameArr[0]:
-            echo "Perform actual code for F1_Submit.";
+            echo "Firstname: ".$_POST[$postNameArr[0]]."<br>"
             break;
 
           case $postNameArr[1]:
-            echo "Perform actual code for F2_Submit.";
+            echo "Lastname: ".$_POST[$postNameArr[1]]." <br>";
             break;
 
           case $postNameArr[2]:
-            echo "Perform actual code for F3_Submit.";
+            echo "Number: ".$_POST[$postNameArr[2]]." <br>";
             break;
 
           case $postNameArr[3]:
-            echo "Perform actual code for F3_Submit.";
+            echo "email: ".$_POST[$postNameArr[3]]." <br>";
             break;
 
           case $postNameArr[4]:
-            echo "Perform actual code for F3_Submit.";
+            echo "password: ".$_POST[$postNameArr[4]]." <br>";
             break;
 
           case $postNameArr[5]:
-            echo "Perform actual code for F3_Submit.";
+            echo "confirmed: ".$_POST[$postNameArr[5]]." <br>";
             break;
 
           default:
-            echo $postName;
+            echo $postName." variable not known";
           }
         } else {
-          echo "post was empty";
+          echo "Post was empty";
         }
       }
-      print_r($postIdentifierArr);
+      echo "</h3></div></div>";
+      echo "<footer class=\"w3-container w3-teal w3-round-xlarge\" style=\"height:40px;\"></footer>";
+      echo "</div></div>";
     }
   ?>
 
-  <div id="form-return-modal-01" class="w3-modal" style="display:block;" onclick="document.getElementById('form-return-modal-01').style.display='none'">
-    <div class="w3-modal-content w3-card-4 w3-teal w3-round-xlarge">
-      <span onclick="document.getElementById('form-return-modal-01').style.display='none'" class="w3-btn w3-display-topright w3-round-xlarge">&times;</span>
-      <br>
-      <br>
-      <div class="w3-container w3-white">
-        <div style="width:fit-content;margin-left:25%;">
-          <h3>
-            Firstname: Cody<br>
-            Lastname: Hill-Boss <br>
-            Number: 20 <br>
-            email: chb@umt.edu <br>
-            password: ******** <br>
-            confirmed:******** <br>
-          </h3>
-        </div>
-      </div>
-      <footer class="w3-container w3-teal w3-round-xlarge" style="height:40px;">
-      </footer>
-    </div>
-  </div>
 
 </body>
 
