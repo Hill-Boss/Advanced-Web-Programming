@@ -17,15 +17,13 @@
       $postNameArr = array('firstname', 'lastname', 'number', 'email', 'psw', 'psw-re');
 
       // Find all of the post identifiers within $_POST
-      $postIdentifierArr = array();
-
       foreach ($postNameArr as $postName)
       {
         if (array_key_exists($postName, $_POST))
         {
-          switch ($postName)
+          switch ($_POST.$postName)
           {
-          case '$postNameArr[0]':
+          case $postNameArr[0]:
             echo "Perform actual code for F1_Submit.";
             break;
 
