@@ -49,13 +49,13 @@
             break;
 
           default:
-            echo $postName
+            echo $postName;
           }
         } else {
-          echo "post was empty"
+          echo "post was empty";
         }
       }
-      print_r($postIdentifierArr)
+      print_r($postIdentifierArr);
     }
   ?>
 
