@@ -64,7 +64,7 @@
       $echo += "</h3></div></div>";
       $echo += "<footer class=\"w3-container w3-teal w3-round-xlarge\" style=\"height:40px;\"></footer>";
       $echo += "</div></div>";
-      return $echo;
+      echo $echo;
     }
   ?>
 

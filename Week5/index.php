@@ -190,7 +190,7 @@
     <div class="w3-container w3-center w3-light-blue">
       <div class="w3-container w3-center">
         <br><br><br>
-        <form class="" name="loginForm" action="../Week5/Form/index.php" onsubmit="return validate()" method="POST">
+        <form class="" name="loginForm" action="../Week5/Form/" onsubmit="return validate()" method="POST">
           <h4>Basic info</h4>
           <label for="firstname">First name</label><br>
           <input class="w3-input inline-block width" type="text" name="firstname" placeholder="First Name">
