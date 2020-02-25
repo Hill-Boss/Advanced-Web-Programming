@@ -18,50 +18,51 @@
     </style>
 
   </head>
-  <body>
-    <script type="text/javascript">
-      function validate() {
-        var first = document.forms["loginForm"]["firstname"].value;
-        var last = document.forms["loginForm"]["lastname"].value;
-        var num = document.forms["loginForm"]["number"].value;
-        var email = document.forms["loginForm"]["email"].value;
-        var psw = document.forms["loginForm"]["psw"].value;
-        var psw_re = document.forms["loginForm"]["psw-re"].value;
+  <script type="text/javascript">
+    function validate() {
+      var first = document.forms["loginForm"]["firstname"].value;
+      var last = document.forms["loginForm"]["lastname"].value;
+      var num = document.forms["loginForm"]["number"].value;
+      var email = document.forms["loginForm"]["email"].value;
+      var psw = document.forms["loginForm"]["psw"].value;
+      var psw_re = document.forms["loginForm"]["psw-re"].value;
 
-        if (first == "" || last == "") {
-          document.getElementById('fn').classList.toggle('hide');
-          document.getElementById('ln').classList.toggle('hide');
-          return false;
-        }
-
-        if(isNaN(num) || (num == "") ) {
-          document.getElementById('n').classList.toggle('hide');
-          return false;
-        }
-
-        if (!(email.includes("@")) || (email   = "") )  {
-          document.getElementById('em').classList.toggle('hide');
-          return false;
-        }
-
-        if(psw != psw_re || psw == '' || psw_re == '') {
-          if (psw == '') {
-            document.getElementById('pw').classList.toggle('hide');
-          }
-          if (psw != psw_re) {
-            document.getElementById('pr').classList.toggle('hide');
-          } else if (psw_re == '') {
-            document.getElementById('pr').classList.toggle('hide');
-          }
-
-          return false;
-        }
-
-        alert("You successfully filled in this form.");
-        return true;
+      if (first == "" || last == "") {
+        document.getElementById('fn').classList.toggle('hide');
+        document.getElementById('ln').classList.toggle('hide');
+        return false;
       }
 
-    </script>
+      if(isNaN(num) || (num == "") ) {
+        document.getElementById('n').classList.toggle('hide');
+        return false;
+      }
+
+      if (!(email.includes("@")) || (email   = "") )  {
+        document.getElementById('em').classList.toggle('hide');
+        return false;
+      }
+
+      if(psw != psw_re || psw == '' || psw_re == '') {
+        if (psw == '') {
+          document.getElementById('pw').classList.toggle('hide');
+        }
+        if (psw != psw_re) {
+          document.getElementById('pr').classList.toggle('hide');
+        } else if (psw_re == '') {
+          document.getElementById('pr').classList.toggle('hide');
+        }
+
+        return false;
+      }
+
+      alert("You successfully filled in this form.");
+      return true;
+    }
+
+  </script>
+
+  <body style="overflow-y:scroll;">
     <div class="w3-container w3-top w3-bottom w3-center w3-light-blue">
       <div class="w3-container w3-center">
         <br><br><br>
