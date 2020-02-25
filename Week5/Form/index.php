@@ -7,7 +7,11 @@
   <link rel="stylesheet" href="../../static/css/main.css">
   <link rel="stylesheet" href="../../static/css/w3.css">
 </head>
-
+  <script type="text/javascript">
+    function gotoPage(page) {
+      window.location = page;
+    }
+  </script>
 <body>
   <!-- <button onclick="document.getElementById('id01').style.display='block'" class="w3-btn w3-black">Open Modal</button> -->
   <?php
@@ -16,9 +20,9 @@
       $postNameArr = array('firstname', 'lastname', 'number', 'email', 'psw', 'psw-re');
 
       // Find all of the post identifiers within $_POST
-      echo "<div id=\"form-return-modal-01\" class=\"w3-modal\" style=\"display:block;\" onclick=\"document.getElementById('form-return-modal-01').style.display='none'\">";
+      echo "<div class=\"w3-modal\" style=\"display:block;\" onclick=\"gotoPage('../')\">";
       echo "<div class=\"w3-modal-content w3-card-4 w3-teal w3-round-xlarge\">";
-      echo "<span onclick=\"document.getElementById('form-return-modal-01').style.display='none'\" class=\"w3-btn w3-display-topright w3-round-xlarge\">&times;</span>";
+      echo "<span onclick=\"gotoPage('../')\" class=\"w3-btn w3-display-topright w3-round-xlarge\">&times;</span>";
       echo "<br><br>";
       echo "<div class=\"w3-container w3-white\">";
       echo "<div style=\"width:fit-content;margin-left:25%;\">";
