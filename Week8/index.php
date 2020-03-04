@@ -14,7 +14,7 @@
           <img src="./imgs/logo.png" alt="Logo Here">
         </div>
         <div class="w3-third w3-center">
-          <h4>Ecommerce</h4>
+          <h2>Ecommerce</h2>
         </div>
         <div class="w3-third w3-center">
           <h6>Login</h6>
