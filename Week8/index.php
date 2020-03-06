@@ -16,7 +16,7 @@
         <div class="w3-third w3-center">
           <h2>Ecommerce</h2>
         </div>
-        <div class="w3-third w3-center">
+        <div class="w3-third w3-center ">
           <h6>Login</h6>
         </div>
 
