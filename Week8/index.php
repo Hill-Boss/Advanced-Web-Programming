@@ -2,16 +2,16 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="../static/css/main.css">
-    <link rel="stylesheet" href="../static/css/w3.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/w3.css">
 
     <title>Ecommerce Midterm Site</title>
   </head>
   <body>
     <div class="w3-top w3-bottom w3-light-gray" style="overflow-y:scroll">
-      <div class="w3-top w3-left w3-right w3-teal">
-        <div class="w3-third">
-          <img src="./imgs/logo.png" alt="Logo Here">
+      <div class="w3-left w3-right w3-teal">
+        <div class="w3-third w3-center">
+          <img src="./imgs/logo2.png" alt="Logo Here">
         </div>
         <div class="w3-third w3-center">
           <h2>Ecommerce</h2>
@@ -21,13 +21,54 @@
         </div>
 
       </div>
+      <!-- body -->
+      <div class="w3-left w3-right">
+          <!-- filter bar -->
+          <div class="w3-left w3-right">
+              <!-- search bar -->
+              <div class="">
+
+              </div>
+              <!-- something or nothing -->
+              <div class="">
+
+              </div>
+              <!-- cart icon -->
+              <div class="">
+
+              </div>
+          </div>
+          <!-- product content -->
+          <div class="w3-left w3-right">
+              <!-- left bar for filters -->
+              <div class="w3-left w3-quarter">
+                  <div class="">
+
+                  </div>
+                  <div class="">
+
+                  </div>
+              </div>
+              <!-- pruducts -->
+              <div class="w3-rest">
+                  <!-- populated from db -->
+                  <div class="">
+
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- footer -->
+      <div class="w3-left w3-right w3-light-grey">
+
+      </div>
     </div>
   <?php
     // connect to database
   	$username = "admin";
   	$password = "pass123";
 
-    $conn = mysqli_connect("webdev.cs.umt.edu","ch124471", "","ch124471")
+    $conn = mysqli_connect("webdev.cs.umt.edu","ch124471", "G33k64ut22k22n","ch124471")
        or die('Could not connect');
     echo "Connected successfully <br>";
 
