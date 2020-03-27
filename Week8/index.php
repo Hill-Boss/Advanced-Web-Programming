@@ -22,24 +22,22 @@
       </div>
     <!-- body -->
     <div class="w3-left w3-right" style="width: -webkit-fill-available;">
-      <!-- filter bar -->
-      <div class="w3-left w3-right">
-          <!-- search bar -->
-          <div class="w3-left w3-quarter w3-center">
-              <input type="text" placeholder="Search..">
+        <!-- filter bar -->
+        <!-- search bar -->
+        <div class="w3-left w3-quarter w3-center">
+          <input type="text" placeholder="Search..">
+        </div>
+        <!-- something or nothing -->
+        <div class="w3-half">
+          <h4>My Products</h4>
+        </div>
+        <!-- cart icon -->
+        <div class="w3-right w3-quarter w3-center">
+          <div class="">
+            <h3>Cart</h3>
           </div>
-          <!-- something or nothing -->
-          <div class="w3-half">
-              <h4>My Products</h4>
-          </div>
-          <!-- cart icon -->
-          <div class="w3-right w3-quarter w3-center">
-              <div class="">
-                <h3>Cart</h3>
-              </div>
-          </div>
-      </div>
-      <!-- product content -->
+        </div>
+        <!-- product content -->
       <div class="w3-left w3-right">
           <!-- left bar for filters -->
           <div class="w3-left w3-quarter">
