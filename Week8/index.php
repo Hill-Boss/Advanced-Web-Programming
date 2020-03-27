@@ -25,15 +25,15 @@
       <!-- filter bar -->
       <div class="w3-left w3-right">
           <!-- search bar -->
-          <div class="w3-quarter">
+          <div class="w3-left w3-quarter w3-center">
               <input type="text" placeholder="Search..">
           </div>
           <!-- something or nothing -->
           <div class="w3-half">
-
+              <h4>My Products</h4>
           </div>
           <!-- cart icon -->
-          <div class="w3-quarter">
+          <div class="w3-right w3-quarter w3-center">
               <div class="">
                 <h3>Cart</h3>
               </div>
