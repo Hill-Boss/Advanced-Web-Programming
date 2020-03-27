@@ -8,10 +8,10 @@
     <title>Ecommerce Midterm Site</title>
   </head>
   <body>
-    <div class="w3-top w3-bottom w3-light-gray" style="overflow-y:scroll">
+    <div class="w3-top w3-bottom w3-left w3-right w3-light-gray" style="overflow-y:scroll">
       <div class="w3-left w3-right w3-teal">
         <div class="w3-third w3-center">
-          <img src="./imgs/logo2.png" alt="Logo Here">
+          <img src="./imgs/logo2.jpg" alt="Logo Here">
         </div>
         <div class="w3-third w3-center">
           <h2>Ecommerce</h2>
