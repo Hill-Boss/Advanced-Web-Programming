@@ -11,7 +11,7 @@
     <div class="w3-top w3-bottom w3-left w3-right w3-light-gray" style="overflow-y:scroll">
       <div class="w3-left w3-right w3-teal">
         <div class="w3-third w3-center">
-          <img src="./imgs/logo2.jpg" alt="Logo Here">
+          <img src="./imgs/logo2.jpg" alt="Logo Here" width="50px" height="50px">
         </div>
         <div class="w3-third w3-center">
           <h2>Ecommerce</h2>
