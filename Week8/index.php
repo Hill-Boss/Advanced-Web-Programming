@@ -8,8 +8,7 @@
     <title>Ecommerce Midterm Site</title>
   </head>
   <body>
-    <div class="w3-top w3-bottom w3-left w3-right w3-light-gray" style="overflow-y:scroll">
-      <div class="w3-left w3-right w3-teal">
+    <div class="w3-left w3-right w3-teal" style="width: -webkit-fill-available;">
         <div class="w3-third w3-center">
           <img src="./imgs/logo2.jpg" alt="Logo Here" width="50px" height="50px">
         </div>
@@ -21,47 +20,48 @@
         </div>
 
       </div>
-      <!-- body -->
+    <!-- body -->
+    <div class="w3-left w3-right" style="width: -webkit-fill-available;">
+      <!-- filter bar -->
       <div class="w3-left w3-right">
-          <!-- filter bar -->
-          <div class="w3-left w3-right">
-              <!-- search bar -->
+          <!-- search bar -->
+          <div class="w3-quarter">
+              <input type="text" placeholder="Search..">
+          </div>
+          <!-- something or nothing -->
+          <div class="w3-half">
+
+          </div>
+          <!-- cart icon -->
+          <div class="w3-quarter">
+              <div class="">
+                <h3>Cart</h3>
+              </div>
+          </div>
+      </div>
+      <!-- product content -->
+      <div class="w3-left w3-right">
+          <!-- left bar for filters -->
+          <div class="w3-left w3-quarter">
               <div class="">
 
               </div>
-              <!-- something or nothing -->
-              <div class="">
-
-              </div>
-              <!-- cart icon -->
               <div class="">
 
               </div>
           </div>
-          <!-- product content -->
-          <div class="w3-left w3-right">
-              <!-- left bar for filters -->
-              <div class="w3-left w3-quarter">
-                  <div class="">
+          <!-- pruducts -->
+          <div class="w3-threequarter">
+              <!-- populated from db -->
+              <div class="">
 
-                  </div>
-                  <div class="">
-
-                  </div>
-              </div>
-              <!-- pruducts -->
-              <div class="w3-rest">
-                  <!-- populated from db -->
-                  <div class="">
-
-                  </div>
               </div>
           </div>
       </div>
-      <!-- footer -->
-      <div class="w3-left w3-right w3-light-grey">
+    </div>
+    <!-- footer -->
+    <div class="w3-left w3-right w3-light-grey">
 
-      </div>
     </div>
   <?php
     // connect to database
