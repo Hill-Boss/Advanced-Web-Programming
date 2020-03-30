@@ -23,19 +23,21 @@
     <!-- body -->
     <div class="w3-left w3-right" style="width: -webkit-fill-available;">
         <!-- filter bar -->
-        <!-- search bar -->
-        <div class="w3-left w3-quarter w3-center">
-          <input type="text" placeholder="Search..">
-        </div>
-        <!-- something or nothing -->
-        <div class="w3-half">
-          <h4>My Products</h4>
-        </div>
-        <!-- cart icon -->
-        <div class="w3-right w3-quarter w3-center">
-          <div class="">
-            <h3>Cart</h3>
-          </div>
+        <div class="w3-light-blue">
+            <!-- search bar -->
+            <div class="w3-left w3-quarter w3-center">
+              <input type="text" placeholder="Search..">
+            </div>
+            <!-- something or nothing -->
+            <div class="w3-half w3-center">
+              <h4>My Products</h4>
+            </div>
+            <!-- cart icon -->
+            <div class="w3-right w3-quarter w3-center">
+              <div class="">
+                <h3>Cart</h3>
+              </div>
+            </div>
         </div>
         <!-- product content -->
       <div class="w3-left w3-right">
@@ -66,7 +68,7 @@
   	$username = "admin";
   	$password = "pass123";
 
-    $conn = mysqli_connect("webdev.cs.umt.edu","ch124471", "G33k64ut22k22n","ch124471")
+    $conn = mysqli_connect("webdev.cs.umt.edu","ch124471", "Eixah3ahp9ringo3oX2AhChoh2taij","ch124471")
        or die('Could not connect');
     echo "Connected successfully <br>";
 
