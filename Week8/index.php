@@ -23,7 +23,7 @@
     <!-- body -->
     <div class="w3-left w3-right" style="width: -webkit-fill-available;">
         <!-- filter bar -->
-        <div class="w3-light-blue">
+        <div class="w3-light-blue" style="height: 100px">
             <!-- search bar -->
             <div class="w3-left w3-quarter w3-center">
               <input type="text" placeholder="Search..">
